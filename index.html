@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="revealjs/css/reveal.min.css">
+		<link rel="stylesheet" href="revealjs/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'revealjs/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+<div class="slides">
+    <section data-id="1dbcd73f7d59c6878c976bd3079ced5a" class="">
+        <h1>
+            <font style="font-size: 54px;">
+                <br>
+            </font>
+        </h1>
+<h1>
+        <font style="font-size: 54px;">Dealing with</font>
+        </h1>
+<h1>&nbsp;Legacy Code</h1>
+<div>Engine Upgrades at 35,000 feet.</div>
+        <div>
+            <br>
+        </div>
+        <div>
+            <br>
+        </div>
+        <div class="fragment" data-fragment-index="0">
+            <h2 style="font-style: normal; font-variant: normal;">On a completely full passenger jet.</h2>
+        </div>
+    </section>
+    <section class="" data-id="626984d985befa35d69a98956fc8058f">
+        <h2>
+            <img src="nervous.png">
+            <br>
+        </h2>
+    </section>
+    <section class="" data-id="5224fec2552ab9c0dd388b546279581c">
+        <h2>What is Legacy Code?</h2>
+<div>
+        <br>
+    </div>
+<div class="fragment" data-fragment-index="0">
+    <font style="font-size: 42px;">
+        <span>page scripts</span>
+    </font>
+</div>
+<div>
+<font style="font-size: 42px;">
+    <span>
+        <br>
+    </span>
+</font>
+</div>
+<div class="fragment" data-fragment-index="1">
+<font style="font-size: 42px;">
+    <span>php 3 or 4 style</span>
+</font>
+</div>
+<div class="fragment" data-fragment-index="2">
+<font style="font-size: 42px;">
+    <br>
+    <span>Include based</span>
+</font>
+</div>
+<div class="fragment" data-fragment-index="3">
+<font style="font-size: 42px;">
+<br>
+<span>mixed php and html</span>
+</font>
+<br>
+</div>
+<div>
+<font style="font-size: 42px;">
+    <span>
+        <br>
+    </span>
+</font>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section class="" data-id="0a17d5a46a3d7778f0a287daee5477ac">
+    <h2>What are we trying to</h2>
+<h2>accomplish?</h2>
+<div>
+    <font style="font-size: 42px;">
+        <br>
+    </font>
+</div>
+<div class="fragment" data-fragment-index="0">
+<font style="font-size: 42px;">Flexibility</font>
+</div>
+<div>
+<font style="font-size: 42px;">
+    <br>
+</font>
+</div>
+<div class="fragment" data-fragment-index="1">
+<font style="font-size: 42px;">Testability</font>
+</div>
+<div>
+<font style="font-size: 42px;">
+    <br>
+</font>
+</div>
+<div class="fragment" data-fragment-index="2">
+<font style="font-size: 42px;">Continuity</font>
+</div>
+</section>
+<section class="stack" data-id="34e37f46c30209e4a3a55fb59fd9c196">
+    <section class="" data-id="0dead5895ce67230220677e95ed9845e">
+        <h2>Pitfalls</h2>
+<img src="http://wp.patheos.com.s3.amazonaws.com/blogs/exploringourmatrix/files/2013/08/Its-a-tarp.png">
+        <div>
+            <br>
+        </div>
+    </section>
+    <section class="" data-id="5d25f79c046e0ff5b6e4ca8713bf4378">
+        <div>
+            <br>
+        </div>
+<div>
+        <br>
+    </div>
+<div>
+    <br>
+</div>The Grand Rewrite<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="0">Shoe-horn a Framework</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="1">Make Multiple Changes Across Files</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="2">Not Writing Tests</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="3">Over Engineering</div>
+</section>
+</section>
+<section class="" data-id="531bb241e5a8820e8038da42bf6445d5">
+    <h2>First Steps</h2>
+<div>
+    <br>
+</div>
+<div class="fragment" data-fragment-index="0">Git</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="1">Autoloader</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="2">Automated Deploy</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="3">Config Loader by Environment</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="4">Symfony2 Request</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="5">Template System</div>
+</section>
+<section class="" data-id="8fadc484d503571713bd4f9cb4b028bf">
+    <h2>Testing</h2>
+<div>
+    <br>
+</div>
+<div class="fragment" data-fragment-index="0">
+<div>
+    <b>A Testing Framework</b>
+</div>
+<div>
+    <br>
+</div>
+<div>Mink (http://mink.behat.org/)</div>
+<div>
+    <br>
+</div>
+<div>CasperJS (http://casperjs.org/)</div>
+</div>
+<div>
+    <br>
+</div>
+<div class="fragment" data-fragment-index="1">
+<div>
+    <b>
+    <br>
+</b>
+</div>
+<div>
+    <b>QA Environment</b>
+</div>
+<div>
+    <br>
+</div>
+<div>Close to Production</div>
+<div>
+    <br>
+</div>
+<div>Available to Principles</div>
+<div>
+    <br>
+</div>
+</div>
+<div>
+    <br>
+</div>
+<div>
+    <br>
+</div>
+</section>
+    <section class="" data-id="ba779683b2b88f0ae03ce0999343652d">
+        <h2>How to approach the codebase</h2>
+<div>
+        <br>
+    </div>
+<div>Choose a page</div>
+<div>
+    <br>
+</div>
+<div>Write tests for that page</div>
+<div>
+<br>
+</div>
+<div>Do one thing.</div>
+<div>
+<br>
+</div>
+<div>Confirm with tests</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="0">
+<b>Commit often!</b>
+</div>
+</section>
+<section class="" data-id="12f8b2f08f4b8135a7aa345a6c89a712">
+    <h2>One Things To Do</h2>
+<div>
+    <br>
+</div>
+<div class="fragment" data-fragment-index="0">Replace includes with autoloading</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="1">Separate Executed Logic and Display Logic</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="2">Extract Persistance to Repositories</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="3">Use Contollers in Place of Page Scipts</div>
+<div>
+<br>
+</div>
+<div class="fragment" data-fragment-index="4">Use Request Object in Place of Superglobals</div>
+</section>
+<section class="" data-id="757c2fb2f35914ae24ec84614302ca8b">
+    <h2>Adding New Features</h2>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>Use your new tools</div>
+<div>
+<br>
+</div>
+<div>Build just the things you need</div>
+<div>
+<br>
+</div>
+<div>Improve anything that interacts</div>
+<div>
+<br>
+</div>
+<div>Avoid adding more technical debt</div>
+</section>
+<section class="" data-id="0d51647d3c0188b8447ea33a5c311bb2">
+<section>
+    <h2>How Do I Know When I'm Done?</h2>
+<div>
+    <br>
+</div>
+<img src="airplane-cat.jpg">
+</section>
+<section>
+<h3>This is just the beginning</h3>
+<div>
+    <br>
+</div>
+<div>
+    <br>
+</div>
+<div class="fragment" data-fragment-index="0">
+<div>Remove All Static Calls</div>
+<div>
+    <br>
+</div>
+<div>Refactor / Simplify</div>
+<div>
+    <br>
+</div>
+<div>Add Front Controller</div>
+<div>
+    <br>
+</div>
+<div>Extract Domain Logic</div>
+<div>
+    <br>
+</div>
+</div>
+<div>
+    <br>
+</div>
+</section>
+</section>
+    <section class="" data-id="59db1b9c2f23a0eaa11d78a3baa7c17f">
+        <h2>
+            <br>
+        </h2>
+<h2>
+        <br>
+    </h2>
+<h2>
+    <br>
+    </h2>
+<h2>
+<span style="font-size: 53.805px; font-weight: bold;">Thanks!</span>
+    <br>
+</h2>
+</section>
+</div>
+
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
